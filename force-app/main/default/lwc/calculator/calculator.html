@@ -1,0 +1,68 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-04-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:connected_apps" size="Large"></lightning-icon>
+             Calculator
+        </h3>
+        <div slot="footer">
+                <div class = "slds-m-around_medium">Result : {result}</div>
+        </div>
+        <p class="slds-p-horizontal_small">
+            <lightning-input
+                label="First Number"
+                name="firstNumber"
+                value={firstNumber}
+                type="number"
+                message-when-type-mismatch = "Please enter a valid number"
+                required 
+                onchange={onChangeEvent}> 
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Clear">
+                    <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Clear</span>
+                </button>
+            </lightning-input>
+            <lightning-input
+                label="Second Number"
+                name="secondNumber"
+                value={secondNumber}
+                type="number"
+                message-when-type-mismatch = "Please enter a valid number"
+                onchange={onChangeEvent}
+                required >
+                <button class="slds-button slds-button_icon slds-input__icon slds-input__icon_right" title="Clear">
+                    <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#clear"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Clear</span>
+                </button>
+            </lightning-input>
+        </p>
+        </br>
+        <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_1-of-4">
+            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <lightning-button class="slds-button slds-button_brand" label ="add" onclick={calculateResult}>+</lightning-button>
+            </div>
+          </div>
+          <div class="slds-col slds-size_1-of-4">
+            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <lightning-button class="slds-button slds-button_brand" label ="sub" onclick={calculateResult}>-</lightning-button>
+            </div>
+          </div>
+          <div class="slds-col slds-size_1-of-4">
+            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                <lightning-button class="slds-button slds-button_brand" label ="mul" onclick={calculateResult}>*</lightning-button>
+            </div>
+          </div>
+        </div>
+    </lightning-card>
+</template>
