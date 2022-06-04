@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-04-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="slds-m-around_small">
+        <lightning-card title="List view" icon-name="standard:contact">
+            <template for:each={contacts} for:item="item" for:index="index">
+                <p key = {item.Id}>
+                    <span>{index}</span> - &nbsp;
+                    <span>{item.Name}</span> &nbsp;#&nbsp;
+                    <span>{item.Email}</span> &nbsp;#&nbsp;
+                    <span>{item.Phone}</span> &nbsp;#&nbsp;
+                </p>
+            </template>
+        </lightning-card> 
+    </div>
+    <div class = "slds-m-around_small">
+        <lightning-card title="List view iterator" icon-name="standard:contact">
+            <template iterator:it={contacts}>
+                <li key = {it.value.Id}>
+                    <div if:true={it.first} class ="upperline"></div>
+                    <span>{it.value.Name}</span> &nbsp;#&nbsp;
+                    <span>{it.value.Email}</span> &nbsp;#&nbsp;
+                    <span>{it.value.Phone}</span> &nbsp;#&nbsp;
+                    <div if:true={it.last} class ="lowerline"></div>
+                </li>
+            </template>
+        </lightning-card>
+    </div>
+</template>

@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-04-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <template if:true={showImage}>
+        <img src="https://t3.ftcdn.net/jpg/01/12/43/90/360_F_112439016_DkgjEftsYWLvlYtyl7gVJo1H9ik7wu1z.jpg" height="200" width="200"> 
+    </template> 
+    <template if:false={showImage}>
+        <img src="https://image.shutterstock.com/image-vector/sad-face-icon-260nw-534257098.jpg" height="200" width="200"> 
+    </template>
+    <div> 
+        <lightning-button 
+            label='change face' 
+            onclick={handleClick} 
+            variant="brand"> 
+        </lightning-button>
+    </div>
+</template>
