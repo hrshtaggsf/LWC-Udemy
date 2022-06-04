@@ -1,6 +1,6 @@
 {
-  "orgName": "Demo company",
-  "edition": "Developer",
+  "orgName": "LWC Company",
+  "edition": "Enterprise",
   "features": ["EnableSetPasswordInApi"],
   "settings": {
     "lightningExperienceSettings": {
