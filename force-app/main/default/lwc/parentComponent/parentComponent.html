@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 06-05-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <div class="slds-p-horizontal_small">
+            <template if:true={showGetterSetter}>
+                <c-getter-setter></c-getter-setter>
+            </template> 
+            <lightning-button variant="brand" label="show and hide" title="Click Me" onclick={handleClick}></lightning-button>   
+        </div>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+</template>

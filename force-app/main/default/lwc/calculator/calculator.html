@@ -2,7 +2,7 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 06-04-2022
+  @last modified on  : 06-05-2022
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 -->
 <template>
@@ -49,19 +49,20 @@
         </br>
         <div class="slds-grid slds-wrap">
         <div class="slds-col slds-size_1-of-4">
-            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
-                <lightning-button class="slds-button slds-button_brand" label ="add" onclick={calculateResult}>+</lightning-button>
-            </div>
+                <lightning-button class="slds-button slds-button_outline-brand slds-align_absolute-center" label ="add" onclick={calculateResult}></lightning-button>
           </div>
+          &nbsp;
+          &nbsp;
+          &nbsp;
           <div class="slds-col slds-size_1-of-4">
-            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
-                <lightning-button class="slds-button slds-button_brand" label ="sub" onclick={calculateResult}>-</lightning-button>
-            </div>
+                <lightning-button class="slds-button slds-button_brand slds-align_absolute-center" label ="sub" onclick={calculateResult}></lightning-button>
+
           </div>
+          &nbsp;
+          &nbsp;
+          &nbsp;
           <div class="slds-col slds-size_1-of-4">
-            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
-                <lightning-button class="slds-button slds-button_brand" label ="mul" onclick={calculateResult}>*</lightning-button>
-            </div>
+                <lightning-button class="slds-button slds-button_outline-brand slds-align_absolute-center" label ="mul" onclick={calculateResult}></lightning-button>
           </div>
         </div>
     </lightning-card>
